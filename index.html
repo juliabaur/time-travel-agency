@@ -10,14 +10,10 @@
 <body>
 
     <header>
-
+        <div class="logo">
+          <h1>FUTURE <br>PERFECT</h1>
+        </div>
         <nav>
-          
-            <div class="logo">
-                <h1>FUTURE <br>PERFECT</h1>
-              </div>
-
-        <div>
           <ul class="nav-links">
             <li><a href="#home">Welcome</a></li>
             <li><a href="#destinations">Destinations</a></li>
@@ -25,11 +21,8 @@
             <li><a href="#about">About Us</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
-        </div>
-
         </nav>
-
-    </header>
+      </header>
     
 
 
@@ -128,14 +121,24 @@
                                 sit amet consectetur adipisicing elit. Quasi cumque similique aliquid minus saepe offi</p>
                     </div>
                 </section>
-                
-                
-       
+
 
         </main>
 
         <footer>
-            <p>&copy; 2024 Future Perfect | All rights reserved</p>
+            <p>&copy; <span id="year"></span> Future Perfect | Julia Baur | 
+                All rights reserved</p>
+
         </footer>
+
+
+        <script>
+            // Get the current year
+            const currentYear = new Date().getFullYear();
+
+            // Insert the year into the element with the ID 'year'
+            document.getElementById('year').textContent = currentYear;
+        </script>
+
     </body>
 </html>

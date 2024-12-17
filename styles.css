@@ -9,11 +9,27 @@ body {
 }
 
 header {
-display: flex;
-align-items: bottom;
-padding: 2rem;
-border-bottom: solid 2px pink;
-background-color: aquamarine;
+  display: flex;
+  align-items: flex-end; /* Aligns items to the bottom */
+  justify-content: space-between; /* Ensures space between the logo and nav */
+  padding: 2rem;
+  gap: 3rem;
+  border-bottom: solid 2px pink;
+  background-color: aquamarine;
+}
+
+.logo {
+  flex-shrink: 0; /* Prevents the logo from shrinking */
+  display: flex;
+  flex-direction: column; /* Allows stacked elements (like FUTURE / PERFECT) */
+  justify-content: flex-end; /* Aligns content at the bottom */
+  border: solid;
+}
+
+.logo h1 {
+  padding: 1rem;
+  font-size: 2rem; /* Adjust the size if needed */
+  line-height: 90%
 
 }
 
@@ -31,22 +47,35 @@ footer {
   background-color: aquamarine;
 }
 
+nav {
+  display: flex;
+  justify-content: flex-end; /* Pushes the navigation links to the right */
+  flex-grow: 1; /* Ensures nav takes up remaining space to align right */
+  text-align: center; /* Aligns navigation links to the right */
+}
 
 nav ul {
   list-style: none;
-  border: solid;
   display: flex;
   justify-content: space-around;
-  gap: 1.5rem;
+  gap: 0rem;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1rem; /* Adds space between links */
+  margin: 0rem;
+  padding: 0;
 }
 
 .nav-links a {
-color: blue;
-text-decoration: none;
+  color: blue;
+  text-decoration: none;
 }
 
 .nav-links li:hover {
-background-color: pink;
+  background-color: pink;
 }
 
 
@@ -145,4 +174,14 @@ background-color: pink;
       grid-template-columns: repeat(2, 1fr); 
       /* Two columns for smaller screens */
   }
+
+  /* Make the nav items stack vertically */
+  nav ul {
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-end;  /* Align to the right */
+    
 }
+
+
+
+
